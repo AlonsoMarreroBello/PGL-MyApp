@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Slot } from "expo-router";
 
-const _layout = () => {
+const AppLayout = () => {
   return (
     <View style={styles.wrapper}>
       <View style={styles.header}>
@@ -18,12 +18,12 @@ const _layout = () => {
   );
 };
 
-export default _layout;
+export default AppLayout;
 
 const styles = StyleSheet.create({
   wrapper: {
+    flex: 1,
     backgroundColor: "white",
-    height: "100%",
   },
   header: {
     backgroundColor: "#D32F2F",
@@ -45,10 +45,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
+    flex: 12,
     justifyContent: "center",
-    padding: 20,
+    paddingTop: 0,
   },
 });

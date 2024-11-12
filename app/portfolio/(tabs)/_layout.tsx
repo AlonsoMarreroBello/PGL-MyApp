@@ -1,20 +1,19 @@
-import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Slot, Tabs } from "expo-router";
-import CustomHeader from "./header";
+import { Tabs } from "expo-router";
+import CustomHeader from "../../../components/Header";
 
-const _layout = () => {
+const TabsLayout = () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "blue",
+        tabBarActiveTintColor: "green",
         header: () => <CustomHeader />,
       }}
     >
-      <Tabs.Screen name="profileScreen" options={{ title: "Repository" }} />
-      <Tabs.Screen name="repositoryScreen" options={{ title: "Repository" }} />
+      <Tabs.Screen name="profile" options={{ title: "Profile" }} />
+      <Tabs.Screen name="repository" options={{ title: "Repository" }} />
     </Tabs>
   );
 };
 
-export default _layout;
+export default TabsLayout;

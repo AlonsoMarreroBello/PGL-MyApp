@@ -6,7 +6,7 @@ const CustomHeader = () => {
     <View style={styles.profileContainer}>
       <Image
         style={styles.profileImage}
-        source={{ uri: "https://example.com/profile.png" }}
+        source={require("../assets/imgs/avatar.png")}
       />
       <View style={styles.profileTextContainer}>
         <Text style={styles.profileName}>Nombre</Text>
@@ -49,38 +49,5 @@ const styles = StyleSheet.create({
   },
   profileDescription: {
     color: "gray",
-  },
-  likesTitle: {
-    fontWeight: "bold",
-    marginVertical: 10,
-  },
-  scrollContainer: {
-    flex: 1,
-  },
-  likeItem: {
-    backgroundColor: "#f0f0f0",
-    padding: 10,
-    borderRadius: 8,
-    marginVertical: 5,
-  },
-  repositoryContainer: {
-    alignItems: "center",
-    marginTop: 20,
-  },
-  repositoryTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginBottom: 10,
-  },
-  repositoryImage: {
-    width: 150,
-    height: 150,
-    backgroundColor: "#000",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  repositoryQR: {
-    width: "100%",
-    height: "100%",
   },
 });
