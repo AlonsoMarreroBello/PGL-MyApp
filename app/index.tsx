@@ -1,7 +1,9 @@
-import { Redirect } from "expo-router";
+import { Link, Redirect } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
+import ProfileScreen from "./portfolio/(tabs)/profileScreen";
+import RepositoryScreen from "./portfolio/(tabs)/repositoryScreen";
 
 export default function App() {
   return (
@@ -17,7 +19,9 @@ export default function App() {
           source={require("..\\assets\\imgs\\a-portfolio-of-funny-stock-market-memes-for-people-who-have-no-idea-what-dividends-are.jpg")}
         />
         <Pressable style={styles.pressable}>
-          <Text style={styles.pressableText}>Botón</Text>
+          <Text style={styles.pressableText}>
+            <Link href={"./portfolio"}>Botón</Link>
+          </Text>
         </Pressable>
       </View>
     </View>
